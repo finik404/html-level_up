@@ -63,6 +63,7 @@
   }
 
   .footer {
+    width: 75%;
     margin-top: 200px;
   }
 }
@@ -167,6 +168,9 @@
 
 //Max-Width: 750px ================================
 @media (max-width: 750px) {
+  .footer {
+    width: 100%;
+  }
 }
 
 //Max-Width: 700px ================================
@@ -259,6 +263,10 @@
       height: 40px;
       width: 80%;
     }
+
+    .list .item {
+      font-size: 16px;
+    }
   }
 
   .policy {
@@ -276,6 +284,15 @@
 
 //Max-Width: 500px ================================
 @media (max-width: 500px) {
+  .footer {
+    .list {
+      gap: 8px 15px;
+
+      .item {
+        font-size: 14px;
+      }
+    }
+  }
 }
 
 //Max-Width: 450px ================================
@@ -284,6 +301,15 @@
     p {
       font-size: 14px;
       line-height: 24px;
+    }
+  }
+
+  .footer {
+    .list {
+      .item {
+        width: 100%;
+        font-size: 16px;
+      }
     }
   }
 }

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ru">
+  <!-- Meta -->
+  @@include('./blocks/main/head.html', { "title": "meta_consent_title", })
+
+  <body>
+    <div class="container">
+      <!-- Header -->
+      @@include('./blocks/header.html')
+
+      <!-- Section -->
+      <section class="policy">
+        <h1 data-i18n="consent"></h1>
+        <div data-i18n="consent_full"></div>
+      </section>
+
+      <!-- Footer -->
+      @@include('./blocks/footer.html')
+    </div>
+
+    <!-- Scripts -->
+    @@include('./blocks/main/js.html')
+  </body>
+</html>

@@ -3,7 +3,6 @@ import locales from "./locales.json";
 
 const customSelect = document.querySelector(".select");
 const trigger = customSelect.querySelector(".trigger");
-const triggerContent = customSelect.querySelector(".trigger_content");
 const triggerText = trigger.querySelector("p");
 const options = customSelect.querySelectorAll(".option");
 const STORAGE_KEY = "selected_lang";
@@ -25,10 +24,14 @@ function detectBrowserLang() {
   ];
 
   const langs = (navigator.languages || [navigator.language]).map((lang) =>
-    lang.slice(0, 2)
+    lang.slice(0, 2),
   );
 
   if (langs.find((lang) => cyrillicLanguages.includes(lang))) return "ru";
+  if (langs.includes("es")) return "es";
+  if (langs.includes("fr")) return "fr";
+  if (langs.includes("de")) return "de";
+  if (langs.includes("pt")) return "pt";
 
   return "en";
 }
@@ -98,7 +101,7 @@ window.addEventListener("DOMContentLoaded", () => {
       updateContent();
       initSelect(langToUse);
       document.body.classList.remove("hidden-before-init");
-    }
+    },
   );
 });
 
@@ -107,7 +110,7 @@ function initSelect(lang) {
   if (!lang) return;
 
   const matchedOption = Array.from(options).find(
-    (option) => option.textContent.trim() === lang
+    (option) => option.textContent.trim() === lang,
   );
 
   if (!matchedOption) return;
