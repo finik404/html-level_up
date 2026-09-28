@@ -127,9 +127,9 @@
     width: 450px;
 
     h1 {
-      font-size: 60px;
+      font-size: 30px;
       margin-bottom: 25px;
-      line-height: 60px;
+      line-height: 40px;
       font-weight: 700;
     }
 
@@ -192,7 +192,7 @@
 
 // Benefits section ------------------
 .benefits {
-  margin-top: 350px;
+  margin-top: 200px;
 
   .pattern {
     position: absolute;
@@ -203,35 +203,50 @@
 
   .box {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
   }
 
   .content {
-    width: 400px;
+    width: 100%;
 
     h2 {
       font-size: 40px;
       line-height: 40px;
-      margin-bottom: 24px;
+      margin-bottom: 70px;
       font-weight: 700;
     }
   }
 
+  .list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 5%;
+    row-gap: 65px;
+  }
+
   .item {
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
-    width: 500px;
+    width: 30%;
+    gap: 20px;
+
+    .item-content {
+      display: flex;
+      gap: 10px;
+    }
 
     &:not(:last-child) {
       margin-bottom: 45px;
     }
 
     .img {
-      width: 55px;
+      width: 35px;
       height: 35px;
       flex-shrink: 0;
-      margin-right: 20px;
 
       img {
         width: 100%;
@@ -242,8 +257,7 @@
 
     h4 {
       font-size: 24px;
-      line-height: 24px;
-      margin-bottom: 20px;
+      line-height: 32px;
       font-weight: 700;
     }
   }
